@@ -1,7 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vitest/config'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  test: {
+    environment: 'happy-dom',
+
+    include: [
+      'src/**/*.test.{ts,tsx,js,jsx}',
+      'src/**/*.spec.{ts,tsx,js,jsx}',
+    ],
+
+    exclude: [
+      'node_modules',
+      'dist',
+      '**/*.config.*',
+      '**/node_modules/**',
+      '**/dist/**'
+    ],
+  },
 })
