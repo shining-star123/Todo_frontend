@@ -229,7 +229,7 @@ const App: React.FC = () => {
                       ['All', 'Active', 'Completed'].map((item: string, index: number) => <option value={index} key={index}>{item}</option>)
                     }
                   </select>
-                  <button className='btn btn-blue' onClick={() => setMode(1)}>+ Add</button>
+                  <button className='btn btn-blue' onClick={() => setMode(1)}>Add Todo</button>
                 </div>
               </div>
               <div className='card-body'>
